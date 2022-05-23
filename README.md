@@ -1,4 +1,4 @@
-# SubsequenceExtraction_SR
+# SubsequenceExtractionSR
 
 ## Introduction
 This is the implementation of the paper Improving Sequential Recommendation via Subsequence Extraction.
