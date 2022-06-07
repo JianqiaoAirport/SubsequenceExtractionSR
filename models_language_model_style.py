@@ -170,7 +170,7 @@ class TransformerNP5Model(nn.Module):
         super().__init__()
         self.se = nn.Embedding(vocab_size, d_model)
         self.pe = PositionalEncoding(d_model, dropout)
-        self.transformer_encoder_1 = Encoder(d_model, 1, nheads, dropout=dropout, norm=nn.LayerNorm(d_model))
+        self.transformer_encoder_1 = Encoder(d_model, 1, nheads, dropout=dropout)
         self.transformer_encoder_2 = get_clones(Encoder(d_model, nlayers, nheads, dropout=dropout, norm=nn.LayerNorm(d_model)), ninterests)
         self.transformer_encoder_3 = Encoder(d_model, 1, nheads, dropout=dropout, norm=nn.LayerNorm(d_model))
         self.d_model = d_model
